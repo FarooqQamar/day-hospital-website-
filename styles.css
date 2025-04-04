@@ -1,46 +1,344 @@
-<!-- styles.css -->
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #F0F8FF;
-    color: #265775;
-}
-header {
-    background-color: #265775;
     color: white;
-    text-align: center;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  h1, h2, p {
+    margin: 0;
+  }
+  
+  /* Start Screen */
+  .startScreen {
+    background-image: url("./images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 20px;
-}
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-nav ul li a {
+    position: relative;
+  }
+  
+  /* Infusion Screen */
+  .infusionscreen {
+    background-image: url("./images/vitamin.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
     color: white;
-    text-decoration: none;
-}
-.hero {
+    justify-content: space-between;
+    padding: 20px;
+    position: relative;
+  }
+  
+  /* Vitamin Screen */
+  .vitaminscreen {
+    background-image: url("./images/iron-infusion.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    position: relative;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 150px;
+    width: auto;
+    max-width: 100%;
+  }
+  
+  .icon img {
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+  }
+  
+  /* Text Content */
+  .textContent, .textContent1, .textContent2 {
     text-align: center;
-    padding: 40px;
-}
-.hero-img {
-    width: 10%;
-    max-width: 900px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-footer {
+    color: #607887;
+  }
+  
+  .welcome {
+    font-size: 90px;
+    font-weight: bolder;
+  }
+  
+  .provide {
+    font-size: 40px;
+  }
+  
+  /* Footer */
+  footer {
     background-color: #265775;
     color: white;
+    padding: 20px;
     text-align: center;
-    padding: 10px;
-    position: relative;
-    bottom: 0;
+    line-height: 1.6;
+  }
+  
+  .adobe {
+    font-size: 1.3em;
+    color: aliceblue;
+  }
+  
+  /* Photo Grid */
+  .photoGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 20px;
+    /* max-width: 1000px; */
+    margin: 0 auto;
+  }
+  
+  .photoGrid img {
     width: 100%;
-}
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px #265775;
+  }
+  
+  /* About Us Section */
+  .aboutUs {
+    padding: 20px;
+    margin-top: 0px;
+    padding-top: 10px;
+    color: black;
+    background-color: #607887;
+    text-align: center;
+    max-width: max-content;
+  }
+  
+  .aboutUs h1 {
+    font-size: 76px;
+    color: #265775;
+  }
+  
+  .aboutUs p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  /* Benefits Section */
+  .benefits {
+    padding: 40px 20px;
+    text-align: center;
+    max-width: max-content;
+    font-family: Arial, sans-serif;
+    background-color: #607887;
+  }
+  
+  .benefits h1 {
+    font-size: 4em;
+    margin-bottom: 10px;
+  }
+  
+  .benefits h2 {
+    font-size: 2.5em;
+    margin-top: 40px;
+    margin-bottom: 15px;
+  }
+  
+  .benefits ol {
+    padding-left: 20px;
+    line-height: 1.8;
+  }
+  
+  .benefits p {
+    font-size: x-large;
+  }
+  
+  .benefits li {
+    font-size: x-large;
+    margin-bottom: 20px;
+  }
+  
+  strong {
+    font-size: xx-large;
+    color: azure;
+    text-align: center;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 1200px) {
+    .navbar {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .logo {
+      height: 100px;
+    }
+  
+    .photoGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .benefits h1 {
+      font-size: 3em;
+    }
+  
+    .benefits h2 {
+      font-size: 2em;
+    }
+  
+    .textContent, .textContent1, .textContent2 {
+      padding: 10px;
+    }
+  
+    .welcome {
+      font-size: 50px;
+    }
+  
+    .provide {
+      font-size: 30px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+    }
+  
+    .logo {
+      height: 80px;
+    }
+  
+    .icon img {
+      height: 50px;
+      width: 50px;
+    }
+  
+    .photoGrid {
+      grid-template-columns: 1fr;
+    }
+  
+    .welcome {
+      font-size: 40px;
+    }
+  
+    .provide {
+      font-size: 25px;
+    }
+  
+    .aboutUs h1 {
+      font-size: 48px;
+    }
+  
+    .aboutUs p {
+      font-size: 18px;
+    }
+  
+    .benefits h1 {
+      font-size: 2.5em;
+    }
+  
+    .benefits h2 {
+      font-size: 2em;
+    }
+  
+    .benefits ol {
+      padding-left: 10px;
+    }
+  
+    .benefits p {
+      font-size: 18px;
+    }
+  
+    .benefits li {
+      font-size: 18px;
+    }
+  
+    strong {
+      font-size: 24px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .navbar {
+      flex-direction: column;
+      padding: 5px;
+    }
+  
+    .logo {
+      height: 60px;
+    }
+  
+    .icon img {
+      height: 40px;
+      width: 40px;
+    }
+  
+    .photoGrid {
+      grid-template-columns: 1fr;
+    }
+  
+    .welcome {
+      font-size: 30px;
+    }
+  
+    .provide {
+      font-size: 20px;
+    }
+  
+    .aboutUs h1 {
+      font-size: 36px;
+    }
+  
+    .aboutUs p {
+      font-size: 16px;
+    }
+  
+    .benefits h1 {
+      font-size: 2em;
+    }
+  
+    .benefits h2 {
+      font-size: 1.8em;
+    }
+  
+    .benefits ol {
+      padding-left: 5px;
+    }
+  
+    .benefits p {
+      font-size: 16px;
+    }
+  
+    .benefits li {
+      font-size: 16px;
+    }
+  
+    strong {
+      font-size: 20px;
+    }
+  }
+  
